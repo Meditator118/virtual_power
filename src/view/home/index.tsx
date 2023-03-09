@@ -2,6 +2,7 @@ import React from 'react';
 import { DownloadOutlined, NotificationOutlined, UserOutlined,AreaChartOutlined,ThunderboltOutlined} from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import DataChunk from '../../compoment/datachunk'
 import'./index.scss'
 
 const { Header,  Sider } = Layout;
@@ -57,7 +58,11 @@ const items3: MenuProps['items']=[{
     }
   ]
 }]
-
+const total ={
+	"numofdevice": 2,
+	"softpower": 1100,
+	"power": 2400
+}
 const Home: React.FC = () => {
   const {
     token: { colorBgContainer },
@@ -74,18 +79,18 @@ const Home: React.FC = () => {
     
 
         <div>
-        <img src='../../../public/img/device.svg' alt="" />
-        <span>fdgfg</span>
+        
+        <span>管理员</span>
         </div>
 
         <div>
-        <img src="../../../public/img/device.svg" alt="" />
-        <span>dsgfdg</span>
+        
+        <span>导出数据</span>
         </div>
 
         <div>
-        <img src="../../../public/img/device.svg" alt="" />
-        <span>fdd</span>
+        
+        <span>消息</span>
         </div>
       </Header>
       <Layout>
@@ -104,7 +109,17 @@ const Home: React.FC = () => {
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
           </Breadcrumb>
+          <div className='data-panel'>
+            <DataChunk title='设备数' data={total.numofdevice}></DataChunk>
+            <DataChunk title='可调负荷' data={total.softpower}></DataChunk>
+            <DataChunk title='总负荷' data={total.power}></DataChunk>
+          </div>
           {/* <Content
+          const total ={
+            "numofdevice": 2,
+            "softpower": 1100,
+            "power": 2400
+          }
             style={{
               padding: 24,
               margin: 0,
