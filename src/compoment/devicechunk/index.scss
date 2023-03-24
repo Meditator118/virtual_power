@@ -1,0 +1,17 @@
+.dev-chu{
+    width: 16vw;
+    height: 18vh;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 5vh 2vw;
+    border: 2px solid #ccc;
+    background-color: white;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    .logo{
+        position: absolute;
+        margin: 0 auto;
+        width: 5vw;
+        height: 5vh;
+    }
+}

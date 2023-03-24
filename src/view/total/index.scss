@@ -1,0 +1,16 @@
+.data-panel{
+    display: flex;
+    justify-content: space-around;
+}
+#chart{
+    width: 40vw;
+    height: 40vh;
+    margin: 0 auto;
+}
+.chart-sel{
+    margin: 3vh auto;
+    background-color: white;
+    width: 60vw;
+     height: 45vh;
+    border-radius: 25px;
+}

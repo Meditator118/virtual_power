@@ -1,6 +1,6 @@
 import React from 'react'
 import'./index.scss'
-interface IProps {title?: string;data?: number;}
+interface IProps {title?: string;data?: number|string;}
 export default function DataChunk(props: IProps) {
   const {title, data}=props
   return (

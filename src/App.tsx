@@ -1,10 +1,12 @@
 import React from 'react';
-import Home from './view/home'
+import { useRoutes} from 'react-router-dom'
+import  indexRouter from './router'
 
 function App() {
+  const RouteList=useRoutes(indexRouter)
   return (
     <div className="App">
-      <Home></Home>
+      {RouteList}
     </div>
   );
 }
