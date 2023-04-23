@@ -1,17 +1,22 @@
 .dev-chu{
-    width: 16vw;
+    position: relative;
+    width: 12vw;
     height: 18vh;
     border-radius: 20px;
     padding: 20px;
-    margin: 5vh 2vw;
+    margin: 5vh 1vw;
     border: 2px solid #ccc;
     background-color: white;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
+    text-align: center;
     .logo{
-        position: absolute;
-        margin: 0 auto;
         width: 5vw;
         height: 5vh;
+    }
+    .dev-detail{
+        text-align: left;
+        font-size: 12px;
+        color: #023459;
+        font-weight: 600;
     }
 }

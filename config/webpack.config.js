@@ -1,4 +1,8 @@
 'use strict';
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
 
 const fs = require('fs');
 const path = require('path');
@@ -250,7 +254,10 @@ module.exports = function (webpackEnv) {
       minimizer: [
         // This is only used in production mode
         new TerserPlugin({
+          
           terserOptions: {
+            cache: true,
+            parallel: true,
             parse: {
               // We want terser to parse ecma 8 code. However, we don't want it
               // to apply any minification steps that turns valid ecma 5 code
@@ -564,6 +571,11 @@ module.exports = function (webpackEnv) {
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
+      // new WebpackBar({
+      //   color: "#85d",  // 默认green，进度条颜色支持HEX
+      //   basic: false,   // 默认true，启用一个简单的日志报告器
+      //   profile:false,  // 默认false，启用探查器。
+      // }),
       new HtmlWebpackPlugin(
         Object.assign(
           {},
@@ -747,6 +759,10 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+        // new BundleAnalyzerPlugin({
+        //   // analyzerMode: 'disabled',  // 不启动展示打包报告的http服务器
+        //   generateStatsFile: true, // 是否生成stats.json文件
+        // })
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter

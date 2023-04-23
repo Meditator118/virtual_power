@@ -3,3 +3,22 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.total-power{
+    width: 40vw;
+    height: 8vh;
+    padding: 0 5vw;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-content: center;
+    .total-power-title{
+        margin-top: 1vh;
+    }
+    .power{
+        color: cornflowerblue;
+        line-height: 100%;
+    }
+}

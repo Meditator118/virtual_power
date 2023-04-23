@@ -32,8 +32,8 @@ option = {
     {
       type: 'graph',
       layout: 'none',
-      symbolSize: 50,
-      roam: true,
+      symbolSize: 70,
+      roam: false,
       label: {
         show: true
       },
@@ -44,69 +44,86 @@ option = {
       },
       data: [
         {
-          name: 'Node 1',
+          name: '尾端模块1',
           x: 500,
-          y: 300
+          y: 300,
+          itemStyle: {
+            color: '#85b8cb'
+          },
         },
         {
-          name: 'Node 2',
+          name: '尾端模块2',
           x: 600,
-          y: 300
+          y: 300,
+          itemStyle: {
+            color: '#85b8cb'
+          },
         },
         {
-          name: 'center',
+          name: '控制中心',
           x: 550,
-          y: 100
+          y: 100,
+          itemStyle: {
+            color: '#1d6a96'
+          },
         },
         {
-          name: 'Node 4',
-          x: 450,
-          y: 500
+          name: '空调1',
+          x: 430,
+          y: 500,
+          itemStyle: {
+            color: '#d1dddb'
+          },
         },
         {
-          name: 'Node 5',
-          x: 520,
-          y: 500
+          name: '空调2',
+          x: 510,
+          y: 500,
+          itemStyle: {
+            color: '#d1dddb'
+          },
         },
         {
-          name: 'Node 6',
-          x: 580,
-          y: 500
+          name: '空调3',
+          x: 590,
+          y: 500,
+          itemStyle: {
+            color: '#d1dddb'
+          },
         },{
-          name: 'Node 7',
-          x: 650,
-          y: 500
+          name: '空调4',
+          x: 670,
+          y: 500,
+          itemStyle: {
+            color: '#d1dddb'
+          },
         }
       ],
       // links: [],
       links: [
         {
-            source: 'center',
-            target: 'Node 1'
+            source: '控制中心',
+            target: '尾端模块1'
           },
           {
-            source: 'center',
-            target: 'Node 2'
+            source: '控制中心',
+            target: '尾端模块2'
           },
           {
-            source: 'Node 1',
-            target: 'Node 5'
+            source: '尾端模块1',
+            target: '空调1'
           },
           {
-            source: 'Node 2',
-            target: 'Node 6'
+            source: '尾端模块2',
+            target: '空调3'
           },
           {
-            source: 'Node 2',
-            target: 'Node 7'
+            source: '尾端模块2',
+            target: '空调4'
           },
-          // {
-          //   source: 'Node 2',
-          //   target: 'Node 4'
-          // },
           {
-            source: 'Node 1',
-            target: 'Node 4'
+            source: '尾端模块1',
+            target: '空调2'
           }
       ],
       lineStyle: {
