@@ -256,8 +256,8 @@ module.exports = function (webpackEnv) {
         new TerserPlugin({
           
           terserOptions: {
-            cache: true,
-            parallel: true,
+            // cache: true,
+            // parallel: true,
             parse: {
               // We want terser to parse ecma 8 code. However, we don't want it
               // to apply any minification steps that turns valid ecma 5 code
