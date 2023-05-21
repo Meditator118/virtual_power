@@ -2,7 +2,7 @@
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const fs = require('fs');
 const path = require('path');
@@ -763,6 +763,7 @@ module.exports = function (webpackEnv) {
         //   // analyzerMode: 'disabled',  // 不启动展示打包报告的http服务器
         //   generateStatsFile: true, // 是否生成stats.json文件
         // })
+        new CleanWebpackPlugin()
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
